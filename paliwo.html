@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>staca paliw</title>
+  <style>
+    .cz {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .najdzerja {
+      background-color: blueviolet;
+    }
+
+    body {
+
+      color: rgb(224, 213, 213);
+    }
+  </style>
+</head>
+
+<body class="najdzerja">
+
+  <h1 class="cz">Paliwo</h1>
+  <div>
+    <label class="1"><input type="radio" name="stacja" id="ropa" value="0"> Ropa</label><br>
+  </div>
+  <div>
+    <label class="1"><input type="radio" name="stacja" id="Benzyna" value="0"> Benzyna</label><br>
+
+  </div>
+
+  <p class="o"><input type="text" id="Li"> Litry</p>
+  <button type="button" onclick="getValueInput()"> Licz ! </button>
+
+  <p id="valueInput"></p>
+
+  <script>
+    function getValueInput() {
+      let L = document.getElementById("Li").value;
+      let c = document.getElementById("ropa").checked;
+      let h = document.getElementById("Benzyna").checked;
+      if (c == true) {
+        let Cena = L * 7.5;
+        document.getElementById("valueInput").innerHTML = Cena + "zł";
+      }
+      if (h == true) {
+        let Cena = L * 6.7;
+        document.getElementById("valueInput").innerHTML = Cena + "zł";
+      }
+    }
+
+  </script>
+
+</body></html>
